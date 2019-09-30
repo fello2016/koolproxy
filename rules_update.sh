@@ -103,4 +103,12 @@ echo
 echo -e "规则更新成功"
 echo
 
+echo
+echo -e "上传到github"
+cd /root/koolproxy
+/usr/bin/git add .
+/usr/bin/git commit -m "更新规则"
+/usr/bin/git push origin master
+echo 
+
 exit 0
