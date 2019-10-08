@@ -16,6 +16,21 @@ mv -f /tmp/koolproxy.txt /root/koolproxy
 mv -f /tmp/kp.dat /root/koolproxy
 mv -f /tmp/user.txt /root/koolproxy
 
+cd /root/koolproxy
+time1=`cat koolproxy.txt  | sed -n '3p'|awk '{print $3,$4}'`
+
+year=`echo $time1|cut -b 1-4`
+month=`echo $time1|cut -b 5-6`
+day=`echo $time1|cut -b 7-8`
+hour=`echo $time1|cut -b 9-10`
+min=`echo $time1|cut -b 11-12`
+
+date1=$year-$month-$day" "$hour":"$min
+
+sed -i "3i\!x  -----update[video]: $date1" koolproxy.txt
+sed -i "3i\!x  -----update[rules]: $date1" koolproxy.txt
+
+
 echo
 echo -e "上传到github"
 cd /root/koolproxy

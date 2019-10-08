@@ -1,5 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 2rSSdgC/afsrzKmfmlhcgQ
+!x  -----update[rules]: 2019-08-30 14:41
+!x  -----update[video]: 2019-08-30 14:41
 ! Version: 201908301441
 ! Title: Fanboy's Annoyance List
 ! Last modified: 30 Aug 2019 14:41 UTC
