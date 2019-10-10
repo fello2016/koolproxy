@@ -20,9 +20,10 @@ time=`grep datetime= rules |head -3|tail -1|awk -F" " '{ print $4 }'|awk -F"\"" 
 date1=$day" "$time
 
 echo -e "-------删除koolproxy.txt第三四行-------"
-sed -i '3,4d' 
-echo -e "-------把规则更新日期写入koolproxy.txt文件-------"
 cd /root/koolproxy
+sed -i '3,4d' 
+
+echo -e "-------把规则更新日期写入koolproxy.txt文件-------"
 sed -i "3i\!x  -----update[video]: $date1" koolproxy.txt
 sed -i "3i\!x  -----update[rules]: $date1" koolproxy.txt
 
