@@ -11,10 +11,10 @@ wget -O kp.dat https://raw.githubusercontent.com/koolproxy/merlin-koolproxy/mast
 #cat user_tmp.txt >>user.txt
 #cat daily_tmp.txt >>daily.txt
 
-mv -f /tmp/daily.txt /root/koolproxy
+#mv -f /tmp/daily.txt /root/koolproxy
 mv -f /tmp/koolproxy.txt /root/koolproxy
 mv -f /tmp/kp.dat /root/koolproxy
-mv -f /tmp/user.txt /root/koolproxy
+#mv -f /tmp/user.txt /root/koolproxy
 
 cd /root/koolproxy
 time1=`cat koolproxy.txt  | sed -n '3p'|awk '{print $3,$4}'`
