@@ -36,13 +36,12 @@ echo -e "-------把规则更新日期写入koolproxy.txt文件-------"
 cd /root/koolproxy
 sed -i "3i\!x  -----update[video]: $date1" koolproxy.txt
 sed -i "3i\!x  -----update[rules]: $date1" koolproxy.txt
+echo -e "-------删除rules文件-------"
+rm -f /tmp/rules
 
-
-echo
 echo -e "-------上传到github-------"
 cd /root/koolproxy
 /usr/bin/git add .
 /usr/bin/git commit -m "更新规则"
 /usr/bin/git push origin master
-echo 
 
