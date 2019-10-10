@@ -21,7 +21,7 @@ date1=$day" "$time
 
 echo -e "-------删除koolproxy.txt第三四行-------"
 cd /root/koolproxy
-sed -i '3,4d' 
+sed -i '3,4d' koolproxy.txt
 
 echo -e "-------把规则更新日期写入koolproxy.txt文件-------"
 sed -i "3i\!x  -----update[video]: $date1" koolproxy.txt
