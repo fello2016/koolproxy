@@ -22,7 +22,6 @@ day=`grep datetime= rules |head -3|tail -1|awk -F" " '{ print $4 }'|awk -F"\"" '
 time=`grep datetime= rules |head -3|tail -1|awk -F" " '{ print $4 }'|awk -F"\"" '{ print $2 }'|awk -F"T" '{  print $2 }'|awk -F: '{ print $1":"$2 }'`
 date1=$day" "$time
 
-#cd /root/koolproxy
 #time1=`cat koolproxy.txt  | sed -n '3p'|awk '{print $3,$4}'`
 
 #year=`echo $time1|cut -b 1-4`
@@ -34,6 +33,7 @@ date1=$day" "$time
 #date1=$year-$month-$day" "$hour":"$min
 #date1=`date +%F" "%R`
 echo -e "-------把规则更新日期写入koolproxy.txt文件-------"
+cd /root/koolproxy
 sed -i "3i\!x  -----update[video]: $date1" koolproxy.txt
 sed -i "3i\!x  -----update[rules]: $date1" koolproxy.txt
 
